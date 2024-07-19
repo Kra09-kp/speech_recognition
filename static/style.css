@@ -1,0 +1,107 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #d0e0f892;
+}
+
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+button{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Btn, #player{
+    display: flex;
+    justify-content: center;  /* Horizontal centering */
+    align-items: center;      /* Vertical centering */
+}
+#startBtn {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #1f71d4;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-right:  50px;
+  }
+  
+#startBtn:hover {background-color: #3770dc}
+  
+#startBtn:active {
+    background-color: #508de9;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#startBtn.recording {
+    background-color: #1d09f7;
+    color: white;
+}
+#recordingIndicator {
+    display: none;
+    color: green;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+#stopBtn {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #f21f1f;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+#stopBtn:hover {background-color: #f21f1f}
+  
+#stopBtn:active {
+    background-color: #f21f1f;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+#recognize{
+    background-color: hsl(200, 16%, 96%); /* Blue button color */
+    color: rgb(27, 66, 238); /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable behavior */
+    margin-top: 10px;
+}
+
+#recognize:hover {
+    background-color: rgb(30, 70, 250); /* Darken the color on hover */
+    color: hsl(200, 16%, 96%);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+#audioPlayback{
+    margin-top: 15px;
+}
+
+#msg{
+    font-size: 30px;
+    color:#f21f1f;
+    text-align: center;
+}
+
+#Result{
+    text-align:center;
+    font-size: 15px;
+    font-family:cursive;
+}
