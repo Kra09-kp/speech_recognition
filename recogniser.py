@@ -16,7 +16,7 @@ model = load_model('./model/voice_model.h5')
 # extract the feature of audio file
 
 def extract_features(files):
-    print("extracting features")
+    print("Extracting features")
     # Sets the name to be the path to where the file is in my computer
     folder = Path('E:/DeepLearning/speech_recognition/uploads').resolve()
     file_name = folder / files.file
@@ -49,6 +49,7 @@ def extract_features(files):
     return mfccs, chroma, mel, contrast, tonnetz
 
 def create_features(features_label):
+    print("Creating Features")
     features = []
     for i in range(0, len(features_label)):
         features.append(np.concatenate((features_label[i][0], features_label[i][1], 
@@ -79,9 +80,11 @@ def predict(test):
     test = process_test(test)
     pred = model.predict(test)
     pred = label_prediction(pred)
-
-    print(pred)
+    print("Prediction Completed !",pred)
+    
     return pred
+
+
 def transcribe(filename):
     print("Transcribing audio...")
     API_URL = "https://api-inference.huggingface.co/models/openai/whisper-small"

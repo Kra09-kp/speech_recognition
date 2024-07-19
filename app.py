@@ -5,13 +5,15 @@ from flask import (Flask,
 from pathlib import Path
 from werkzeug.utils import secure_filename
 from recogniser import predict,transcribe
+
 app = Flask(__name__)
 
 # Set upload folder
 UPLOAD_FOLDER = Path('uploads')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-chat_history = []
+
+chat_history = [] # to maintain chat history
 @app.route('/chat-history', methods=['GET'])
 def get_chat_history():
     return jsonify(chat_history)
@@ -26,7 +28,6 @@ def clear_history():
 @app.route('/')
 def index():
     clear_history()
-    
     return render_template('home.html')
 
 @app.route('/upload', methods=['POST'])
